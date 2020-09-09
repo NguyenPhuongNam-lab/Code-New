@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('layouts/header'); -%>
+
+    <body>
+
+        <!-- Navigation -->
+        <%- include('layouts/navbar'); -%>
+
+            <!-- Page Header -->
+            <header class="masthead">
+                <!-- <div class="overlay"></div> -->
+                <!-- <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-10 mx-auto">
+                            <div class="site-heading">
+                                <h1>HOSPITANICA</h1>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </header>
+
+            <!-- Post Content -->
+            <div class="container">
+                <div class="patient-prof">
+                <form action="" method="POST">
+                <nav class="navbar navbar-expand-lg">
+                    <h3>PATIENT PROFILE</h3>
+                    <ul class="navbar-nav ml-auto">
+                        <input id="save-btn" class="btn btn-primary" type="submit" value="SAVE">
+                    </ul>
+                </nav>
+                <nav class="navbar navbar-expand-lg">
+                <div class="few-word">
+                    Thank you for choosing us. The below profile of patient will be sent to the hospitals your chosen for consultation. Please note that - by clicking Save
+                    button, you agreed to our Term of Service and confirmed to share your private information with us and the hospital you choose as well. We promise
+                    your information will not be shared to any other parties at any kind for any purpose.
+                </div>
+                </nav>
+                <div class="container-fluid">
+                <div class="patient-prof">
+                    
+                    <div class="row">
+                        <label class="col-sm-1">First name</label>
+                        <div class="col-sm-2">
+                            <input name="firstName" class="form-control" value=""/>
+                        </div>
+                        <label class="col-sm-1">Last name</label>
+                        <div class="col-sm-2">
+                            <input name="lastName" class="form-control" value=""/>  
+                        </div>
+                        <label class="col-sm-2">OR fullnam (as in passport)</label>
+                        <div class="col-sm-2">
+                            <input name="orFullname" class="form-control" value=""/>  
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label class="col-sm-1">Date of birth</label>
+                        <div class="col-sm-2">
+                            <input name="dateOfbirth" class="form-control" value=""/>
+                        </div>
+                        <label class="col-sm-1">Gender</label>
+                        <div class="col-sm-2">
+                            <input name="gender" class="form-control" value=""/>  
+                        </div>
+                        <label class="col-sm-1">Nationality</label>
+                        <div class="col-sm-2">
+                            <input name="nationality" class="form-control" value=""/>  
+                        </div>
+                        <label class="col-sm-1">Country of residence</label>
+                        <div class="col-sm-2">
+                            <input name="countryOfResidence" class="form-control" value=""/>  
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label class="col-sm-2">Passport/ID card#</label>
+                        <div class="col-sm-3">
+                            <input name="Passport" class="form-control" value=""/>
+                        </div>
+                        <label class="col-sm-1">Issued by</label>
+                        <div class="col-sm-2">
+                            <input name="issuedBy" class="form-control" value=""/>  
+                        </div>
+                        <label class="col-sm-1">Expired date</label>
+                        <div class="col-sm-2">
+                            <input name="expiredDate" class="form-control" value=""/>  
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label class="col-sm-2">Picture(s) of passport/ID card</label>
+                        <div class="col-sm-3">
+                            <input name="pictureOfPassport"  type="file" value="Choose file"/>
+                        </div>
+                        <label class="col-sm-2">Do you need language support</label>
+                        <div class="col-sm-2">
+                            <input name="languagesupport"  type="checkbox"/> Yes
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label class="col-sm-2">Medical history</label>
+                        <div class="col-sm-12">
+                            <input name="medicalHistory" class="form-control l1" value=""/>                    
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label class="col-sm-2">Diagnosis (if have)</label>
+                        <div class="col-sm-10">
+                            <input name="diagnosis" class="form-control" value=""/>                    
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label class="col-sm-2">Treatment (if have)</label>
+                        <div class="col-sm-10">
+                            <input name="treatment" class="form-control" value=""/>                    
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label class="col-sm-4">Medical record files upload (if have)</label>
+                        <div class="col-sm-2">
+                            <input name="medicalrecorfile"  type="file" value="Choose file"/>
+                        </div>
+                    </div>
+                    
+                </div>
+                </div>
+                  </form>
+                </div>
+          
+            </div>
+
+            <!-- Footer -->
+
+            <%- include('layouts/footer'); -%>
+                <%- include('layouts/scripts'); -%>
+
+    </body>
+
+</html>

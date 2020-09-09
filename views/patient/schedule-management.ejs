@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('layouts/header'); -%>
+
+    <body>
+
+        <!-- Navigation -->
+        <%- include('layouts/navbar'); -%>
+
+            <!-- Page Header -->
+            <header class="masthead">
+                <!-- <div class="overlay"></div> -->
+                <!-- <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-10 mx-auto">
+                            <div class="site-heading">
+                                <h1>HOSPITANICA</h1>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </header>
+
+            <!-- Post Content -->
+            <div class="container">
+                <form action="" method="POST">
+                <div class="patient-prof">
+                    <h2>Manage your booking</h2><br>
+                    <h5>You want to book an appointment for</h5><br>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <input name="relative"  type="checkbox"/> Relatives
+                        </div>
+                        <div class="col-sm-2">
+                            <input name="yourself"  type="checkbox"/> Yourself
+                        </div>
+                    </div>
+                    <br>
+                    <h5>Patient information</h5><br>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <input name="fullName" class="form-control" placeholder="Fullname"/>  
+                        </div>
+                        <div class="col-sm-6">
+                            <input name="DateOfBirth" class="form-control" placeholder="Date of birth"/>  
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <select class="custom-select" id="genderselect" name="Gender">
+                                <option selected>Gender</option>
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                            </select>  
+                        </div>
+                        <div class="col-sm-6">
+                            <input name="Phone" class="form-control" placeholder="Phone"/> 
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <input name="Email" class="form-control" placeholder="Email"/> 
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <input name="Address" class="form-control" placeholder="Address"/> 
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <input name="District" class="form-control" placeholder="District"/> 
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <input name="Province" class="form-control" placeholder="Province"/> 
+                        </div>
+                    </div>
+                    <br>
+                    <h5>Schedule information</h5><br>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <input name="DayExamination" class="form-control" placeholder="Day of the examination"/>  
+                        </div>
+                        <div class="col-sm-6">
+                            <input name="TimeExamination" class="form-control" placeholder="Examination time"/>  
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <input name="Describe" class="form-control l2" placeholder="Describe symptoms"/>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <ul class="navbar-nav ml-auto">
+                            <input id="book-btn" class="btn-book" type="submit" value="Book an appointment">
+                         </ul>
+                    </div>
+                </div>
+                </form>
+            </div>
+
+            <!-- Footer -->
+
+            <%- include('layouts/footer'); -%>
+                <%- include('layouts/scripts'); -%>
+
+    </body>
+
+</html>

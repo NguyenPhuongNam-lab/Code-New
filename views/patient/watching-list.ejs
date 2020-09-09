@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('layouts/header'); -%>
+
+    <body>
+
+        <!-- Navigation -->
+        <%- include('layouts/navbar'); -%>
+
+            <!-- Page Header -->
+            <header class="masthead">
+                <!-- <div class="overlay"></div> -->
+                <!-- <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-10 mx-auto">
+                            <div class="site-heading">
+                                <h1>HOSPITANICA</h1>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </header>
+
+            <!-- Post Content -->
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <h3>WATCHING LIST</h3>
+                <ul class="navbar-nav ml-auto">
+                    <form class="form-inline" action="/somepage">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    </form>
+                </ul>
+            </nav>
+        </div>
+        <div id="function">
+            <div class= "container">
+                <div class="mains">
+                        <% Details.forEach((detail) => { %>
+                    <div class="forms" >
+                        <div class="container">
+                                <nav class="navbar navbar-expand-lg">
+                                    <input class="form-control" type="text" name="iD" valua="<%= detail.id %>" hidden/>
+                                  <h4><%= detail.hospitalName %></h4>
+                                  <ul class="navbar-nav ml-auto">
+                                      <form class="form-inline" action="">
+                                        <a href="/information-hospital/<%= detail.id %>" id="save-btn" class="btn btn-primary btn-user btn-block btn-search">View</a>                                      </form>
+                                  </ul>
+                                </nav> 
+                        </div>
+                            <div class= "container">
+                              <div class= "row">
+                                 <div class ="col-sm-8">
+                                    <%= detail.description %>
+                                 </div>
+                                 <div class ="col-sm-4">
+                                    <img class="img-ptr" src="/img/JHH.jpg"/>
+                                 </div>
+                              </div>
+                           </div>
+                    </div>
+                         <% }) %>
+                        </div>
+                    </div>
+                </div>
+             <br>
+
+            <div id="pages">
+                    <nav class="navbar navbar-expand-lg">
+                        <ul class="pagination">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Page</a>
+                            </li>
+                        <li class="page-item active">
+                            <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                            </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                            </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                            </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+            </div>
+
+            <!-- Footer -->
+
+            <%- include('layouts/footer'); -%>
+                <%- include('layouts/scripts'); -%>
+
+    </body>
+
+</html>

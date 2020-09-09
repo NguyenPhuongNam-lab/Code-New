@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Hospitaca - Register</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="/css/admin.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="bg-gradient-primary">
+
+    <div class="container" style="width: 728px;">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row ">
+                    <div class="col-lg-5 d-none d-lg-block"></div>
+                    <div class="col-lg-7 ">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                            </div>
+                            <form action="/register" method="POST">
+                                <div class="row">
+                                    <label class="col-md-2">Role</label>
+                                    <div class="col-md-2">
+                                        <select name="type" class="form-control">
+                                            <option value="1" {{#if_equal user.type 1}} selected {{/if_equal}}>Patient</option>
+                                            <option value="2" {{#if_equal user.type 2}} selected {{/if_equal}}>Consultants</option>
+                                            <option value="3" {{#if_equal user.type 3}} selected {{/if_equal}}>Representative</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group align" id="name">
+                                    <div class="input-wrapper">
+                                        <label for="firstName">First Name</label>
+                                        <input type="firstName" id="firstName" name="firstName" class="form-control" placeholder="Enter First Name" />
+                                        <div id="firstName-error" class="message-error"></div>
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <label for="lastName">Last Name</label>
+                                        <input type="lastName" id="lastName" name="lastName" class="form-control" placeholder="Enter Last Name" />
+                                        <div id="lastName-error" class="message-error"></div>
+                                    </div>
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="orFullname">Or fullname (as in passport) </label>
+                                    <input type="orFullname" id="orFullname" name="orFullname" class="form-control" placeholder="Or fullname" />
+                                </div>
+                                <div class="form-group align" id="dateOfBirth">
+                                    <div class="input-wrapper">
+                                        <label for="dateOfBirth">Date of birth</label>
+                                        <input type="dateOfBirth" id="dateOfBirth" name="dateOfBirth" class="form-control" placeholder="Date of birth" />
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <label for="gender">Gender</label>
+                                        <input type="gender" id="gender" name="gender" class="form-control" placeholder="Gender" />
+                                    </div>
+                                </div>
+                                <div class="form-group align" id="country">
+                                    <div class="input-wrapper">
+                                        <label for="nationality">Nationality</label>
+                                        <input type="nationality" id="nationality" name="nationality" class="form-control" placeholder="Nationality" />
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <label for="gender">Country of residence </label>
+                                        <input type="countryofresidence " id="countryofresidence" name="countryofresidence" class="form-control" placeholder="Country of residence " />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="passport">Passport / ID card # </label>
+                                    <input type="passport" id="passport" name="passport" class="form-control" placeholder="Passport / ID card" />
+                                </div>
+                                <div class="form-group align" id="issued">
+                                    <div class="input-wrapper">
+                                        <label for="issuedBy">issued by</label>
+                                        <input type="issuedBy" id="issuedBy" name="issuedBy" class="form-control" placeholder="issued by" />
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <label for="expiredDate">Expired date </label>
+                                        <input type="expiredDate " id="expiredDate" name="expiredDate" class="form-control" placeholder="Expired date" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="picture">Picture(s) of passport / ID card</label>
+                                    <input type="file" id="picture" name="picture" class="form-control" />
+                                </div>
+                                <div class="form-group align" id="contact">
+                                    <div class="input-wrapper">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" name="email" class="form-control" placeholder="Email" />
+                                        <div id="email-error" class="message-error"></div>
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <label for="mobile">Mobile #</label>
+                                        <input type="mobile " id="mobile" name="mobile" class="form-control" placeholder="Mobile" />
+                                    </div>
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="username">Username</label>
+                                    <input type="username" id="username" name="username" class="form-control" placeholder="Username" />
+                                </div>
+                                <div class="form-group align" id="password">
+                                    <div class="input-wrapper">
+                                        <label for="password">Password</label>
+                                        <input type="password" id="password" name="password" class="form-control" placeholder="Password" />
+                                        <div id="password-error" class="message-error"></div>
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <label for="password">Confirm Password</label>
+                                        <input type="password" id="password2" name="password2" class="form-control" placeholder="Confirm Password" />
+                                        <div id="password2-error" class="message-error"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="checkbox icheck">
+                                        <label>
+                        <input type="checkbox">by clicking the below button, I agreed to accept the Term of Service …. <a href="#"></a>
+                      </label>
+                                    </div>
+                                </div>
+                                <a href="login" class="btn btn-primary btn-user btn-block">Register Account</a>
+                                <hr>
+                                <a href="home" class="btn btn-google btn-user btn-block">
+                                    <i class="fab fa-google fa-fw"></i> Register with Google</a>
+                                <a href="home" class="btn btn-facebook btn-user btn-block">
+                                    <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook</a>
+                            </form>
+                            <hr>
+                            <div class="text-center">
+                                <a class="small" href="forgot-password">Forgot Password?</a>
+                            </div>
+                            <div class="text-center">
+                                <a class="small" href="login">Already have an account? Login!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>
